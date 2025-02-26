@@ -54,6 +54,6 @@
   }
   
   .smooth-gradient {
-    @apply bg-gradient-to-br from-[#0EA5E9] via-[#0284C7] to-[#0C4A6E];
+    @apply bg-gradient-to-br from-[#1E3A8A] via-[#1E40AF] to-[#0F172A];
   }
 }
