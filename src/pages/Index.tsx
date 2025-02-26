@@ -2,6 +2,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { ChartLine, Brain, HeartPulse, Users, ArrowRight } from "lucide-react";
+import Navigation from "@/components/Navigation";
 
 const Index = () => {
   const [isHovered, setIsHovered] = useState("");
@@ -30,7 +31,9 @@ const Index = () => {
   ];
 
   return (
-    <div className="min-h-screen overflow-x-hidden">
+    <div className="min-h-screen overflow-x-hidden pt-16"> {/* Added pt-16 for navbar spacing */}
+      <Navigation />
+      
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center px-4 py-20">
         <div className="absolute inset-0 bg-gradient-to-br from-secondary via-background to-background z-0" />
