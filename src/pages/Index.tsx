@@ -109,7 +109,7 @@ const Index = () => {
               Ready to Transform Health Monitoring?
             </h2>
             <p className="text-lg text-muted-foreground mb-8">
-              Join our waitlist to be among the first to access our revolutionary platform
+              Join our early access program to be among the first to access our revolutionary platform
             </p>
             <form className="max-w-md mx-auto px-4">
               <div className="flex flex-col md:flex-row gap-4">
@@ -122,7 +122,7 @@ const Index = () => {
                   type="submit"
                   className="w-full md:w-auto px-6 py-3 bg-primary text-white rounded-lg hover:bg-primary/90 transition-colors whitespace-nowrap"
                 >
-                  Join Waitlist
+                  Get Early Access
                 </button>
               </div>
             </form>

@@ -42,7 +42,7 @@ const Navigation = () => {
               className="flex items-center justify-center w-10 h-10 rounded-lg bg-primary hover:bg-primary/90 text-white transition-all md:w-auto md:h-auto md:px-4 md:py-2"
             >
               <ClipboardList className="w-4 h-4" />
-              <span className="hidden md:inline ml-2">Waiting List</span>
+              <span className="hidden md:inline ml-2">Early Access</span>
             </a>
           </div>
         </div>
