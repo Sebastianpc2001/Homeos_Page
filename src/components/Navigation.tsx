@@ -16,22 +16,32 @@ const Navigation = () => {
           <Link to="/" className="text-xl font-bold text-primary">HOMEOS</Link>
 
           {/* Navigation Items */}
-          <div className="flex items-center gap-2 md:gap-6">
-            <Link to="/research" className="flex items-center gap-1 md:gap-2 text-gray-600 hover:text-primary transition-colors">
+          <div className="flex items-center gap-3 md:gap-6">
+            <Link 
+              to="/research" 
+              className="flex items-center justify-center w-10 h-10 rounded-lg border border-gray-200 hover:border-primary/20 bg-white/50 hover:bg-primary/5 text-gray-600 hover:text-primary transition-all md:w-auto md:h-auto md:bg-transparent md:border-0 md:hover:bg-transparent"
+            >
               <BookOpen className="w-4 h-4" />
-              <span className="hidden md:inline">Research</span>
+              <span className="hidden md:inline ml-2">Research</span>
             </Link>
-            <a href="#vision" className="flex items-center gap-1 md:gap-2 text-gray-600 hover:text-primary transition-colors">
+            <a 
+              href="#vision" 
+              className="flex items-center justify-center w-10 h-10 rounded-lg border border-gray-200 hover:border-primary/20 bg-white/50 hover:bg-primary/5 text-gray-600 hover:text-primary transition-all md:w-auto md:h-auto md:bg-transparent md:border-0 md:hover:bg-transparent"
+            >
               <Eye className="w-4 h-4" />
-              <span className="hidden md:inline">Vision</span>
+              <span className="hidden md:inline ml-2">Vision</span>
             </a>
-            <button className="flex items-center gap-1 md:gap-2 text-gray-600 hover:text-primary transition-colors">
+            <button 
+              className="flex items-center justify-center w-10 h-10 rounded-lg border border-gray-200 hover:border-primary/20 bg-white/50 hover:bg-primary/5 text-gray-600 hover:text-primary transition-all md:w-auto md:h-auto md:bg-transparent md:border-0 md:hover:bg-transparent"
+            >
               <LogIn className="w-4 h-4" />
-              <span className="hidden md:inline">Log in</span>
+              <span className="hidden md:inline ml-2">Log in</span>
             </button>
-            <button className="flex items-center gap-1 md:gap-2 px-2 py-1.5 md:px-4 md:py-2 text-white bg-primary rounded-lg hover:bg-primary/90 transition-colors">
+            <button 
+              className="flex items-center justify-center w-10 h-10 rounded-lg bg-primary hover:bg-primary/90 text-white transition-all md:w-auto md:h-auto md:px-4 md:py-2"
+            >
               <ClipboardList className="w-4 h-4" />
-              <span className="hidden md:inline">Waiting List</span>
+              <span className="hidden md:inline ml-2">Waiting List</span>
             </button>
           </div>
         </div>
