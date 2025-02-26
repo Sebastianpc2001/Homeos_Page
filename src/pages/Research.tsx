@@ -1,6 +1,6 @@
 
 import { motion } from "framer-motion";
-import { ArrowLeft, FileText, Brain, Heart, ChartLine, Timer } from "lucide-react";
+import { ArrowLeft, FileText, Brain, Heart, ChartLine, Timer, Activity } from "lucide-react";
 import { Link } from "react-router-dom";
 import Navigation from "@/components/Navigation";
 
@@ -11,16 +11,11 @@ const Research = () => {
       icon: <Heart className="w-6 h-6" />,
       papers: [
         {
-          title: "Novel Biomarkers in Cardiovascular Disease",
-          authors: "Johnson et al., 2023",
-          journal: "Nature Cardiovascular Research",
-          abstract: "Recent advances in biomarker discovery for early detection of cardiovascular inflammation..."
-        },
-        {
-          title: "Inflammatory Pathways in Heart Disease",
-          authors: "Smith et al., 2023",
-          journal: "Circulation Research",
-          abstract: "Understanding the role of inflammatory mediators in cardiovascular disease progression..."
+          title: "Cell free DNA as a diagnostic and prognostic marker for cardiovascular diseases",
+          authors: "Johansson et al., 2019",
+          journal: "Clinica Chimica Acta",
+          abstract: "Comprehensive review of cell-free DNA as biomarkers in cardiovascular diseases...",
+          link: "https://pubmed.ncbi.nlm.nih.gov/31978408/"
         }
       ]
     },
@@ -29,16 +24,31 @@ const Research = () => {
       icon: <Timer className="w-6 h-6" />,
       papers: [
         {
-          title: "Cellular Aging and Stress Response",
-          authors: "Williams et al., 2023",
+          title: "Cell‐free DNA as a biomarker of aging",
+          authors: "Teo et al., 2019",
           journal: "Aging Cell",
-          abstract: "Investigation of cellular stress responses in aging and their impact on longevity..."
+          abstract: "Investigation into cell-free DNA as a potential biomarker for biological aging...",
+          link: "https://doi.org/10.1111/acel.12890"
+        }
+      ]
+    },
+    {
+      title: "Stress & Inflammation",
+      icon: <Activity className="w-6 h-6" />,
+      papers: [
+        {
+          title: "Circulating Cell-Free DNA Differentiates Severity of Inflammation",
+          authors: "Heightman et al., 2016",
+          journal: "Biological Research for Nursing",
+          abstract: "Study on the relationship between cell-free DNA levels and inflammation severity...",
+          link: "https://doi.org/10.1177/1099800416642571"
         },
         {
-          title: "Biomarkers of Biological Aging",
-          authors: "Brown et al., 2023",
-          journal: "Nature Aging",
-          abstract: "Identification and validation of novel biomarkers for biological age assessment..."
+          title: "Cell-free DNA release following psychosocial and physical stress in women and men",
+          authors: "Smith et al., 2023",
+          journal: "Nature Scientific Reports",
+          abstract: "Investigation of stress-induced changes in cell-free DNA levels across genders...",
+          link: "https://doi.org/10.1038/s41398-025-03242-5"
         }
       ]
     },
@@ -47,16 +57,11 @@ const Research = () => {
       icon: <ChartLine className="w-6 h-6" />,
       papers: [
         {
-          title: "Early Cancer Detection Using cfDNA",
-          authors: "Zhang et al., 2023",
+          title: "The origin of highly elevated cell-free DNA in healthy individuals and patients with pancreatic, colorectal, lung, or ovarian cancer",
+          authors: "Bronkhorst et al., 2022",
           journal: "Cancer Discovery",
-          abstract: "Development of sensitive methods for early cancer detection using cell-free DNA..."
-        },
-        {
-          title: "Stress-Induced Cancer Progression",
-          authors: "Miller et al., 2023",
-          journal: "Cancer Research",
-          abstract: "Understanding the relationship between chronic stress and cancer progression..."
+          abstract: "Analysis of cell-free DNA origins in cancer patients and healthy individuals...",
+          link: "https://doi.org/10.1158/2159-8290.CD-21-1252"
         }
       ]
     },
@@ -65,16 +70,11 @@ const Research = () => {
       icon: <Brain className="w-6 h-6" />,
       papers: [
         {
-          title: "Biomarkers in Neurodegeneration",
-          authors: "Davis et al., 2023",
-          journal: "Neurology",
-          abstract: "Novel approaches to detecting early signs of neurodegeneration using blood-based biomarkers..."
-        },
-        {
-          title: "Stress and Cognitive Decline",
-          authors: "Anderson et al., 2023",
-          journal: "Nature Neuroscience",
-          abstract: "Investigating the impact of chronic stress on cognitive function and neurodegeneration..."
+          title: "Distinctive cell-free DNA methylation characterizes presymptomatic genetic frontotemporal dementia",
+          authors: "Ferrari et al., 2023",
+          journal: "Annals of Clinical and Translational Neurology",
+          abstract: "Study of cell-free DNA methylation patterns in frontotemporal dementia...",
+          link: "https://doi.org/10.1002/acn3.51997"
         }
       ]
     }
@@ -129,7 +129,14 @@ const Research = () => {
                     <div className="flex items-start gap-3">
                       <FileText className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
                       <div>
-                        <h3 className="font-semibold mb-1">{paper.title}</h3>
+                        <a 
+                          href={paper.link}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="block font-semibold mb-1 hover:text-primary transition-colors"
+                        >
+                          {paper.title}
+                        </a>
                         <p className="text-sm text-muted-foreground mb-2">
                           {paper.authors} - {paper.journal}
                         </p>

@@ -16,21 +16,21 @@ const Navigation = () => {
           <Link to="/" className="text-xl font-bold text-primary">HOMEOS</Link>
 
           {/* Navigation Items */}
-          <div className="flex items-center gap-6">
-            <Link to="/research" className="flex items-center gap-2 text-gray-600 hover:text-primary transition-colors">
-              <BookOpen className="w-4 h-4" />
+          <div className="flex items-center gap-2 md:gap-6">
+            <Link to="/research" className="flex items-center gap-1 md:gap-2 text-sm md:text-base text-gray-600 hover:text-primary transition-colors">
+              <BookOpen className="w-3 h-3 md:w-4 md:h-4" />
               <span>Research</span>
             </Link>
-            <a href="#vision" className="flex items-center gap-2 text-gray-600 hover:text-primary transition-colors">
-              <Eye className="w-4 h-4" />
+            <a href="#vision" className="flex items-center gap-1 md:gap-2 text-sm md:text-base text-gray-600 hover:text-primary transition-colors">
+              <Eye className="w-3 h-3 md:w-4 md:h-4" />
               <span>Vision</span>
             </a>
-            <button className="flex items-center gap-2 text-gray-600 hover:text-primary transition-colors">
-              <LogIn className="w-4 h-4" />
+            <button className="flex items-center gap-1 md:gap-2 text-sm md:text-base text-gray-600 hover:text-primary transition-colors">
+              <LogIn className="w-3 h-3 md:w-4 md:h-4" />
               <span>Log in</span>
             </button>
-            <button className="flex items-center gap-2 px-4 py-2 text-white bg-primary rounded-lg hover:bg-primary/90 transition-colors">
-              <ClipboardList className="w-4 h-4" />
+            <button className="flex items-center gap-1 md:gap-2 px-3 py-1.5 md:px-4 md:py-2 text-sm md:text-base text-white bg-primary rounded-lg hover:bg-primary/90 transition-colors">
+              <ClipboardList className="w-3 h-3 md:w-4 md:h-4" />
               <span>Waiting List</span>
             </button>
           </div>
