@@ -18,26 +18,22 @@ export default {
         sans: ['Inter', 'sans-serif'],
       },
       colors: {
-        border: "#2A4178",
-        input: "#2A4178",
-        ring: "#1E3A8A",
-        background: "#1E3A8A",
-        foreground: "#FFFFFF",
+        border: "hsl(var(--border))",
+        input: "hsl(var(--input))",
+        ring: "hsl(var(--ring))",
+        background: "hsl(var(--background))",
+        foreground: "hsl(var(--foreground))",
         primary: {
-          DEFAULT: "#FFFFFF",
-          foreground: "#1E3A8A",
+          DEFAULT: "#1E3A8A",
+          foreground: "#FFFFFF",
         },
         secondary: {
-          DEFAULT: "#2A4178",
-          foreground: "#FFFFFF",
+          DEFAULT: "#E2E8F0",
+          foreground: "#1E3A8A",
         },
         accent: {
           DEFAULT: "#0F172A",
           foreground: "#FFFFFF",
-        },
-        muted: {
-          DEFAULT: "#2A4178",
-          foreground: "#C8C8C9",
         },
       },
       keyframes: {

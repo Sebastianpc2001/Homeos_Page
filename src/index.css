@@ -6,41 +6,16 @@
 @tailwind utilities;
 
 @layer base {
-  :root {
-    --background: 221 71% 33%;
-    --foreground: 0 0% 100%;
-    --card: 221 71% 33%;
-    --card-foreground: 0 0% 100%;
-    --popover: 221 71% 33%;
-    --popover-foreground: 0 0% 100%;
-    --primary: 0 0% 100%;
-    --primary-foreground: 221 71% 33%;
-    --secondary: 221 49% 32%;
-    --secondary-foreground: 0 0% 100%;
-    --muted: 221 49% 32%;
-    --muted-foreground: 0 0% 78%;
-    --accent: 221 49% 32%;
-    --accent-foreground: 0 0% 100%;
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 0 0% 98%;
-    --border: 221 49% 32%;
-    --input: 221 49% 32%;
-    --ring: 221 71% 33%;
-    --radius: 0.75rem;
-  }
-}
-
-@layer base {
   * {
     @apply border-border;
   }
   body {
-    @apply bg-background text-foreground antialiased;
+    @apply bg-white text-gray-900 antialiased;
     font-feature-settings: "ss01", "ss02", "cv01", "cv02", "cv03";
   }
   
   .glass-card {
-    @apply backdrop-blur-md bg-white/10 border border-white/20 shadow-lg;
+    @apply bg-white shadow-lg rounded-xl;
   }
   
   .text-balance {
@@ -54,6 +29,6 @@
   }
   
   .smooth-gradient {
-    @apply bg-gradient-to-br from-secondary via-background to-background;
+    @apply bg-gradient-to-br from-gray-50 via-white to-white;
   }
 }
