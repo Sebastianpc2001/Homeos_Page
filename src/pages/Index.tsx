@@ -48,7 +48,7 @@ const Index = () => {
               Launching Soon
             </span>
             <h1 className="text-4xl md:text-6xl font-bold mb-6 text-balance">
-              Revolutionizing Health Monitoring Through Advanced Stress Analysis
+              Advanced Stress Analysis
             </h1>
             <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
               HOMEOS measures and analyzes stress and inflammation using patented biomarker technology to help prevent health issues before they arise.
