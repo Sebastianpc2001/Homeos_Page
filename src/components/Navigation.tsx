@@ -1,6 +1,7 @@
 
 import { BookOpen, Eye, LogIn, ClipboardList } from "lucide-react";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 const Navigation = () => {
   return (
@@ -12,14 +13,14 @@ const Navigation = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo/Brand */}
-          <div className="text-xl font-bold text-primary">HOMEOS</div>
+          <Link to="/" className="text-xl font-bold text-primary">HOMEOS</Link>
 
           {/* Navigation Items */}
           <div className="flex items-center gap-6">
-            <a href="#research" className="flex items-center gap-2 text-gray-600 hover:text-primary transition-colors">
+            <Link to="/research" className="flex items-center gap-2 text-gray-600 hover:text-primary transition-colors">
               <BookOpen className="w-4 h-4" />
               <span>Research</span>
-            </a>
+            </Link>
             <a href="#vision" className="flex items-center gap-2 text-gray-600 hover:text-primary transition-colors">
               <Eye className="w-4 h-4" />
               <span>Vision</span>
