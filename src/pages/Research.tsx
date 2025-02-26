@@ -1,6 +1,6 @@
 
 import { motion } from "framer-motion";
-import { ArrowLeft, FileText, Brain, Heart, Virus, Timer } from "lucide-react";
+import { ArrowLeft, FileText, Brain, Heart, ChartLine, Timer } from "lucide-react";
 import { Link } from "react-router-dom";
 import Navigation from "@/components/Navigation";
 
@@ -44,7 +44,7 @@ const Research = () => {
     },
     {
       title: "Cancer Research",
-      icon: <Virus className="w-6 h-6" />,
+      icon: <ChartLine className="w-6 h-6" />,
       papers: [
         {
           title: "Early Cancer Detection Using cfDNA",
