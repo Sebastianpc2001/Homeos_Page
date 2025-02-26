@@ -53,13 +53,13 @@ const Index = () => {
             <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
               HOMEOS measures and analyzes stress and inflammation using patented biomarker technology to help prevent health issues before they arise.
             </p>
-            <button 
+            <a 
+              href="#waitlist" 
               className="inline-flex items-center px-6 py-3 text-base font-medium text-white bg-primary rounded-lg hover:bg-primary/90 transition-colors"
-              onClick={() => console.log("Contact button clicked")}
             >
               Get Early Access
               <ArrowRight className="ml-2 w-4 h-4" />
-            </button>
+            </a>
           </motion.div>
         </div>
       </section>
@@ -102,7 +102,7 @@ const Index = () => {
       </section>
 
       {/* Contact Section */}
-      <section className="py-20 px-4 bg-secondary">
+      <section id="waitlist" className="py-20 px-4 bg-secondary scroll-mt-20">
         <div className="container">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
