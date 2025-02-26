@@ -8,7 +8,7 @@ const Research = () => {
   const categories = [
     {
       title: "Cardiovascular Inflammation",
-      icon: <Heart className="w-6 h-6" />,
+      icon: <Heart className="w-6 h-6 text-[#1E3A8A]" />,
       papers: [
         {
           title: "Cell free DNA as a diagnostic and prognostic marker for cardiovascular diseases",
@@ -88,7 +88,7 @@ const Research = () => {
         <div className="mb-8">
           <Link 
             to="/" 
-            className="inline-flex items-center text-white hover:text-white/80 transition-colors"
+            className="inline-flex items-center text-[#1E3A8A] hover:text-[#1E3A8A]/80 transition-colors"
           >
             <ArrowLeft className="w-4 h-4 mr-2" />
             Back to Home
@@ -98,7 +98,7 @@ const Research = () => {
         <motion.h1 
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="text-4xl font-bold mb-8 text-white"
+          className="text-4xl font-bold mb-8 text-[#1E3A8A]"
         >
           Research Papers
         </motion.h1>
@@ -113,10 +113,10 @@ const Research = () => {
               className="glass-card p-6 rounded-xl"
             >
               <div className="flex items-center gap-3 mb-4">
-                <div className="p-2 bg-white/10 rounded-lg text-white">
+                <div className="p-2 bg-[#1E3A8A]/10 rounded-lg">
                   {category.icon}
                 </div>
-                <h2 className="text-2xl font-semibold text-white">{category.title}</h2>
+                <h2 className="text-2xl font-semibold text-[#1E3A8A]">{category.title}</h2>
               </div>
 
               <div className="space-y-4">
@@ -124,23 +124,23 @@ const Research = () => {
                   <motion.div
                     key={paper.title}
                     whileHover={{ scale: 1.02 }}
-                    className="p-4 bg-white/5 rounded-lg shadow-sm border border-white/10"
+                    className="p-4 bg-white/5 rounded-lg shadow-sm border border-[#1E3A8A]/10"
                   >
                     <div className="flex items-start gap-3">
-                      <FileText className="w-5 h-5 text-white mt-1 flex-shrink-0" />
+                      <FileText className="w-5 h-5 text-[#1E3A8A] mt-1 flex-shrink-0" />
                       <div>
                         <a 
                           href={paper.link}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="block font-semibold mb-1 text-white hover:text-white/80 transition-colors"
+                          className="block font-semibold mb-1 text-[#1E3A8A] hover:text-[#1E3A8A]/80 transition-colors"
                         >
                           {paper.title}
                         </a>
-                        <p className="text-sm text-gray-300 mb-2">
+                        <p className="text-sm text-gray-600 mb-2">
                           {paper.authors} - {paper.journal}
                         </p>
-                        <p className="text-sm text-gray-400">{paper.abstract}</p>
+                        <p className="text-sm text-gray-500">{paper.abstract}</p>
                       </div>
                     </div>
                   </motion.div>
