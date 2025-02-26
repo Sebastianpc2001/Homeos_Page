@@ -24,13 +24,13 @@ const Navigation = () => {
               <BookOpen className="w-4 h-4" />
               <span className="hidden md:inline ml-2">Research</span>
             </Link>
-            <a 
-              href="#vision" 
+            <Link 
+              to="/vision" 
               className="flex items-center justify-center w-10 h-10 rounded-lg border border-gray-200 hover:border-primary/20 bg-white/50 hover:bg-primary/5 text-gray-600 hover:text-primary transition-all md:w-auto md:h-auto md:bg-transparent md:border-0 md:hover:bg-transparent"
             >
               <Eye className="w-4 h-4" />
               <span className="hidden md:inline ml-2">Vision</span>
-            </a>
+            </Link>
             <button 
               className="flex items-center justify-center w-10 h-10 rounded-lg border border-gray-200 hover:border-primary/20 bg-white/50 hover:bg-primary/5 text-gray-600 hover:text-primary transition-all md:w-auto md:h-auto md:bg-transparent md:border-0 md:hover:bg-transparent"
             >
