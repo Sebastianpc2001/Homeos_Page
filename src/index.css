@@ -7,25 +7,25 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 240 10% 3.9%;
-    --card: 0 0% 100%;
-    --card-foreground: 240 10% 3.9%;
-    --popover: 0 0% 100%;
-    --popover-foreground: 240 10% 3.9%;
-    --primary: 255 71% 95%;
-    --primary-foreground: 240 5.9% 10%;
-    --secondary: 240 4.8% 95.9%;
-    --secondary-foreground: 240 5.9% 10%;
-    --muted: 240 4.8% 95.9%;
-    --muted-foreground: 240 3.8% 46.1%;
-    --accent: 240 4.8% 95.9%;
-    --accent-foreground: 240 5.9% 10%;
+    --background: 221 71% 33%;
+    --foreground: 0 0% 100%;
+    --card: 221 71% 33%;
+    --card-foreground: 0 0% 100%;
+    --popover: 221 71% 33%;
+    --popover-foreground: 0 0% 100%;
+    --primary: 0 0% 100%;
+    --primary-foreground: 221 71% 33%;
+    --secondary: 221 49% 32%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 221 49% 32%;
+    --muted-foreground: 0 0% 78%;
+    --accent: 221 49% 32%;
+    --accent-foreground: 0 0% 100%;
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
-    --border: 240 5.9% 90%;
-    --input: 240 5.9% 90%;
-    --ring: 142.1 76.2% 36.3%;
+    --border: 221 49% 32%;
+    --input: 221 49% 32%;
+    --ring: 221 71% 33%;
     --radius: 0.75rem;
   }
 }
@@ -40,7 +40,7 @@
   }
   
   .glass-card {
-    @apply backdrop-blur-md bg-white/80 border border-white/20 shadow-lg;
+    @apply backdrop-blur-md bg-white/10 border border-white/20 shadow-lg;
   }
   
   .text-balance {
@@ -54,6 +54,6 @@
   }
   
   .smooth-gradient {
-    @apply bg-gradient-to-br from-[#1E3A8A] via-[#1E40AF] to-[#0F172A];
+    @apply bg-gradient-to-br from-secondary via-background to-background;
   }
 }
