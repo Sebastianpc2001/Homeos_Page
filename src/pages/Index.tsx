@@ -31,7 +31,7 @@ const Index = () => {
   ];
 
   return (
-    <div className="min-h-screen overflow-x-hidden pt-16"> {/* Added pt-16 for navbar spacing */}
+    <div className="min-h-screen overflow-x-hidden pt-16">
       <Navigation />
       
       {/* Hero Section */}
@@ -111,16 +111,16 @@ const Index = () => {
             <p className="text-lg text-muted-foreground mb-8">
               Join our waitlist to be among the first to access our revolutionary platform
             </p>
-            <form className="max-w-md mx-auto">
-              <div className="flex gap-4">
+            <form className="max-w-md mx-auto px-4">
+              <div className="flex flex-col md:flex-row gap-4">
                 <input
                   type="email"
                   placeholder="Enter your email"
-                  className="flex-1 px-4 py-3 rounded-lg border border-border focus:outline-none focus:ring-2 focus:ring-primary"
+                  className="flex-1 px-4 py-3 rounded-lg border border-border focus:outline-none focus:ring-2 focus:ring-primary w-full"
                 />
                 <button
                   type="submit"
-                  className="px-6 py-3 bg-primary text-white rounded-lg hover:bg-primary/90 transition-colors"
+                  className="w-full md:w-auto px-6 py-3 bg-primary text-white rounded-lg hover:bg-primary/90 transition-colors whitespace-nowrap"
                 >
                   Join Waitlist
                 </button>
