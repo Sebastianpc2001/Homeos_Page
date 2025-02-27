@@ -9,19 +9,23 @@
   "features": {
     "stressBiomarkers": {
       "title": "Biomarqueurs du Stress",
-      "description": "Mesure révolutionnaire de l'ADN acellulaire pour une évaluation précise du niveau de stress"
+      "description": "Mesure révolutionnaire de l'ADN acellulaire pour une évaluation précise du niveau de stress",
+      "detailedDescription": "L'ADN acellulaire a été développé comme biomarqueur pour la médecine préventive au cours de la dernière décennie. Cependant, sa détection est restée extrêmement longue et coûteuse. Avec notre brevet, nous avons développé une méthode rapide et accessible ne nécessitant qu'une goutte de sang."
     },
     "holisticAnalysis": {
       "title": "Analyse Holistique",
-      "description": "Évaluation complète du stress biochimique, physique et psychologique"
+      "description": "Évaluation complète du stress biochimique, physique et psychologique",
+      "detailedDescription": "Le stress est multidimensionnel – la santé d'une personne peut être fortement compromise dans un domaine, affectant d'autres aspects. Pour y répondre, nous intégrons des évaluations physiques, psychologiques et biologiques pour comprendre les individus dans leur globalité."
     },
     "dataIntegration": {
       "title": "Intégration des Données",
-      "description": "Plateforme unifiée rassemblant toutes les métriques de santé dans un tableau de bord accessible"
+      "description": "Plateforme unifiée rassemblant toutes les métriques de santé dans un tableau de bord accessible",
+      "detailedDescription": "Pour bien comprendre ces points de données, ils doivent être analysés ensemble. Nous construisons un système qui unifie l'analyse des données et la simulation en un tableau de bord accessible."
     },
     "professionalFocus": {
       "title": "Focus Professionnel",
-      "description": "Solutions adaptées aux professionnels de la santé et aux départements RH"
+      "description": "Solutions adaptées aux professionnels de la santé et aux départements RH",
+      "detailedDescription": "Nous fournissons une plateforme qui permet aux professionnels de la santé et aux départements RH de gérer efficacement leurs patients dans un système centralisé."
     }
   },
   "readyToTransform": "Prêt à Transformer la Surveillance de la Santé ?",
@@ -30,5 +34,6 @@
   "submitting": "Soumission en cours...",
   "research": "Recherche",
   "vision": "Vision",
-  "earlyAccess": "Accès Anticipé"
+  "earlyAccess": "Accès Anticipé",
+  "backToHome": "Retour à l'Accueil"
 }

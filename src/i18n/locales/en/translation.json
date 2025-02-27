@@ -9,19 +9,23 @@
   "features": {
     "stressBiomarkers": {
       "title": "Stress Biomarkers",
-      "description": "Revolutionary cell-free DNA measurement for accurate stress level assessment"
+      "description": "Revolutionary cell-free DNA measurement for accurate stress level assessment",
+      "detailedDescription": "Cell-free DNA has been developed as a biomarker for preventive medicine over the past decade. However, its detection has remained extremely time-consuming and expensive. With our patent, we have developed a rapid and accessible method requiring just a drop of blood."
     },
     "holisticAnalysis": {
       "title": "Holistic Analysis",
-      "description": "Comprehensive evaluation of biochemical, physical, and psychological stress"
+      "description": "Comprehensive evaluation of biochemical, physical, and psychological stress",
+      "detailedDescription": "Stress is multidimensional—one's health can be highly compromised in one area, affecting others. To address this, we integrate physical, psychological, and biological assessments to understand individuals as a whole."
     },
     "dataIntegration": {
       "title": "Data Integration",
-      "description": "Unified platform bringing all health metrics into one accessible dashboard"
+      "description": "Unified platform bringing all health metrics into one accessible dashboard",
+      "detailedDescription": "To fully comprehend these data points, they must be analyzed together. We are building a system that unifies data analysis and simulation into one accessible dashboard."
     },
     "professionalFocus": {
       "title": "Professional Focus",
-      "description": "Tailored solutions for medical professionals and HR departments"
+      "description": "Tailored solutions for medical professionals and HR departments",
+      "detailedDescription": "We provide a platform that enables medical professionals and HR departments to efficiently manage their patients in one centralized system."
     }
   },
   "readyToTransform": "Ready to Transform Health Monitoring?",
@@ -30,5 +34,6 @@
   "submitting": "Submitting...",
   "research": "Research",
   "vision": "Vision",
-  "earlyAccess": "Early Access"
+  "earlyAccess": "Early Access",
+  "backToHome": "Back to Home"
 }

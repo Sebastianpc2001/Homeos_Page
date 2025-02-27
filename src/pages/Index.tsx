@@ -1,7 +1,7 @@
 
 import { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
-import { ChartLine, Brain, HeartPulse, Users, ArrowRight } from "lucide-react";
+import { ChartLine, Brain, HeartPulse, Users, ArrowRight, Lightbulb } from "lucide-react";
 import Navigation from "@/components/Navigation";
 import { Link } from "react-router-dom";
 import { supabase } from "@/integrations/supabase/client";
@@ -241,8 +241,19 @@ const Index = () => {
             transition={{ duration: 0.8 }}
             className="max-w-4xl mx-auto text-center"
           >
-            <span className="inline-block px-4 py-1.5 mb-6 text-sm font-medium rounded-full bg-primary/10 text-primary">
+            <span className="inline-flex items-center gap-2 px-4 py-1.5 mb-6 text-sm font-medium rounded-full bg-primary/10 text-primary">
               {t("launchingSoon")}
+              <motion.div
+                animate={{ opacity: [1, 0.4, 1] }}
+                transition={{ 
+                  repeat: Infinity, 
+                  duration: 1.5,
+                  ease: "easeInOut" 
+                }}
+                className="text-green-500 drop-shadow-[0_0_3px_rgba(34,197,94,0.7)]"
+              >
+                <Lightbulb className="w-4 h-4" />
+              </motion.div>
             </span>
             <h1 className="text-4xl md:text-6xl font-bold mb-6 text-balance">
               {t("advancedStressAnalysis")}
@@ -281,17 +292,19 @@ const Index = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   viewport={{ once: true }}
-                  className="glass-card p-6 rounded-xl cursor-pointer hover:shadow-lg transition-all"
+                  className="glass-card p-6 rounded-xl cursor-pointer hover:shadow-lg transition-all h-full flex flex-col"
                   onMouseEnter={() => setIsHovered(feature.title)}
                   onMouseLeave={() => setIsHovered("")}
                 >
-                  <div className={`w-12 h-12 rounded-lg flex items-center justify-center mb-4 ${
-                    isHovered === feature.title ? "bg-primary text-white" : "bg-secondary text-primary"
-                  } transition-colors duration-300`}>
-                    {feature.icon}
+                  <div className="flex flex-col items-center text-center h-full">
+                    <div className={`w-12 h-12 rounded-lg flex items-center justify-center mb-4 ${
+                      isHovered === feature.title ? "bg-primary text-white" : "bg-secondary text-primary"
+                    } transition-colors duration-300`}>
+                      {feature.icon}
+                    </div>
+                    <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
+                    <p className="text-muted-foreground mt-auto">{feature.description}</p>
                   </div>
-                  <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
-                  <p className="text-muted-foreground">{feature.description}</p>
                 </motion.div>
               </Link>
             ))}

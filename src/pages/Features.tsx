@@ -13,25 +13,25 @@ const Features = () => {
       icon: <HeartPulse className="w-8 h-8" />,
       title: t("features.stressBiomarkers.title"),
       description: t("features.stressBiomarkers.description"),
-      detailedDescription: "Cell-free DNA has been developed as a biomarker for preventive medicine over the past decade. However, its detection has remained extremely time-consuming and expensive. With our patent, we have developed a rapid and accessible method requiring just a drop of blood."
+      detailedDescription: t("features.stressBiomarkers.detailedDescription")
     },
     {
       icon: <Brain className="w-8 h-8" />,
       title: t("features.holisticAnalysis.title"),
       description: t("features.holisticAnalysis.description"),
-      detailedDescription: "Stress is multidimensional—one's health can be highly compromised in one area, affecting others. To address this, we integrate physical, psychological, and biological assessments to understand individuals as a whole."
+      detailedDescription: t("features.holisticAnalysis.detailedDescription")
     },
     {
       icon: <ChartLine className="w-8 h-8" />,
       title: t("features.dataIntegration.title"),
       description: t("features.dataIntegration.description"),
-      detailedDescription: "To fully comprehend these data points, they must be analyzed together. We are building a system that unifies data analysis and simulation into one accessible dashboard."
+      detailedDescription: t("features.dataIntegration.detailedDescription")
     },
     {
       icon: <Users className="w-8 h-8" />,
       title: t("features.professionalFocus.title"),
       description: t("features.professionalFocus.description"),
-      detailedDescription: "We provide a platform that enables medical professionals and HR departments to efficiently manage their patients in one centralized system."
+      detailedDescription: t("features.professionalFocus.detailedDescription")
     }
   ];
 
@@ -46,7 +46,7 @@ const Features = () => {
             className="inline-flex items-center text-[#1E3A8A] hover:text-[#1E3A8A]/80 transition-colors"
           >
             <ArrowLeft className="w-4 h-4 mr-2" />
-            Back to Home
+            {t("backToHome")}
           </Link>
         </div>
 

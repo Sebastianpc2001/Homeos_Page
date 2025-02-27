@@ -9,19 +9,23 @@
   "features": {
     "stressBiomarkers": {
       "title": "Biomarcadores de Estrés",
-      "description": "Medición revolucionaria de ADN libre de células para una evaluación precisa del nivel de estrés"
+      "description": "Medición revolucionaria de ADN libre de células para una evaluación precisa del nivel de estrés",
+      "detailedDescription": "El ADN libre de células se ha desarrollado como un biomarcador para la medicina preventiva durante la última década. Sin embargo, su detección ha sido extremadamente lenta y costosa. Con nuestra patente, hemos desarrollado un método rápido y accesible que requiere solo una gota de sangre."
     },
     "holisticAnalysis": {
       "title": "Análisis Holístico",
-      "description": "Evaluación integral del estrés bioquímico, físico y psicológico"
+      "description": "Evaluación integral del estrés bioquímico, físico y psicológico",
+      "detailedDescription": "El estrés es multidimensional: la salud de uno puede estar muy comprometida en un área, afectando a otras. Para abordar esto, integramos evaluaciones físicas, psicológicas y biológicas para entender a las personas como un todo."
     },
     "dataIntegration": {
       "title": "Integración de Datos",
-      "description": "Plataforma unificada que reúne todas las métricas de salud en un panel accesible"
+      "description": "Plataforma unificada que reúne todas las métricas de salud en un panel accesible",
+      "detailedDescription": "Para comprender completamente estos puntos de datos, deben analizarse juntos. Estamos construyendo un sistema que unifica el análisis de datos y la simulación en un panel accesible."
     },
     "professionalFocus": {
       "title": "Enfoque Profesional",
-      "description": "Soluciones adaptadas para profesionales médicos y departamentos de RRHH"
+      "description": "Soluciones adaptadas para profesionales médicos y departamentos de RRHH",
+      "detailedDescription": "Proporcionamos una plataforma que permite a los profesionales médicos y departamentos de RRHH gestionar eficientemente a sus pacientes en un sistema centralizado."
     }
   },
   "readyToTransform": "¿Listo para Transformar el Monitoreo de la Salud?",
@@ -30,5 +34,6 @@
   "submitting": "Enviando...",
   "research": "Investigación",
   "vision": "Visión",
-  "earlyAccess": "Acceso Anticipado"
+  "earlyAccess": "Acceso Anticipado",
+  "backToHome": "Volver al Inicio"
 }
