@@ -7,8 +7,10 @@ import { Link } from "react-router-dom";
 import { supabase } from "@/integrations/supabase/client";
 import { Toaster } from "@/components/ui/sonner";
 import { toast } from "sonner";
+import { useTranslation } from "react-i18next";
 
 const Index = () => {
+  const { t } = useTranslation();
   const [isHovered, setIsHovered] = useState("");
   const [email, setEmail] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -16,23 +18,23 @@ const Index = () => {
   const features = [
     {
       icon: <HeartPulse className="w-6 h-6" />,
-      title: "Stress Biomarkers",
-      description: "Revolutionary cell-free DNA measurement for accurate stress level assessment",
+      title: t("features.stressBiomarkers.title"),
+      description: t("features.stressBiomarkers.description"),
     },
     {
       icon: <Brain className="w-6 h-6" />,
-      title: "Holistic Analysis",
-      description: "Comprehensive evaluation of biochemical, physical, and psychological stress",
+      title: t("features.holisticAnalysis.title"),
+      description: t("features.holisticAnalysis.description"),
     },
     {
       icon: <ChartLine className="w-6 h-6" />,
-      title: "Data Integration",
-      description: "Unified platform bringing all health metrics into one accessible dashboard",
+      title: t("features.dataIntegration.title"),
+      description: t("features.dataIntegration.description"),
     },
     {
       icon: <Users className="w-6 h-6" />,
-      title: "Professional Focus",
-      description: "Tailored solutions for medical professionals and HR departments",
+      title: t("features.professionalFocus.title"),
+      description: t("features.professionalFocus.description"),
     },
   ];
 
@@ -89,19 +91,19 @@ const Index = () => {
             className="max-w-4xl mx-auto text-center"
           >
             <span className="inline-block px-4 py-1.5 mb-6 text-sm font-medium rounded-full bg-primary/10 text-primary">
-              Launching Soon
+              {t("launchingSoon")}
             </span>
             <h1 className="text-4xl md:text-6xl font-bold mb-6 text-balance">
-              Advanced Stress Analysis
+              {t("advancedStressAnalysis")}
             </h1>
             <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-              HOMEOS measures and analyzes stress and inflammation using patented biomarker technology to help prevent health issues before they arise.
+              {t("description")}
             </p>
             <a 
               href="#waitlist" 
               className="inline-flex items-center px-6 py-3 text-base font-medium text-white bg-primary rounded-lg hover:bg-primary/90 transition-colors"
             >
-              Get Early Access
+              {t("getEarlyAccess")}
               <ArrowRight className="ml-2 w-4 h-4" />
             </a>
           </motion.div>
@@ -113,10 +115,10 @@ const Index = () => {
         <div className="container">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Comprehensive Health Monitoring
+              {t("comprehensiveHealthMonitoring")}
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Our platform combines cutting-edge biomarker analysis with holistic health assessment
+              {t("platformDescription")}
             </p>
           </div>
 
@@ -151,16 +153,16 @@ const Index = () => {
         <div className="container">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Ready to Transform Health Monitoring?
+              {t("readyToTransform")}
             </h2>
             <p className="text-lg text-muted-foreground mb-8">
-              Join our early access program to be among the first to access our revolutionary platform
+              {t("joinEarlyAccess")}
             </p>
             <form onSubmit={handleSubmit} className="max-w-md mx-auto px-4">
               <div className="flex flex-col md:flex-row gap-4">
                 <input
                   type="email"
-                  placeholder="Enter your email"
+                  placeholder={t("enterEmail")}
                   className="flex-1 px-4 py-3 rounded-lg border border-border focus:outline-none focus:ring-2 focus:ring-primary w-full"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
@@ -171,7 +173,7 @@ const Index = () => {
                   className="w-full md:w-auto px-6 py-3 bg-primary text-white rounded-lg hover:bg-primary/90 transition-colors whitespace-nowrap disabled:opacity-70"
                   disabled={isSubmitting}
                 >
-                  {isSubmitting ? "Submitting..." : "Get Early Access"}
+                  {isSubmitting ? t("submitting") : t("getEarlyAccess")}
                 </button>
               </div>
             </form>

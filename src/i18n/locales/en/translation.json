@@ -1,0 +1,34 @@
+
+{
+  "launchingSoon": "Launching Soon",
+  "advancedStressAnalysis": "Advanced Stress Analysis",
+  "description": "HOMEOS measures and analyzes stress and inflammation using patented biomarker technology to help prevent health issues before they arise.",
+  "getEarlyAccess": "Get Early Access",
+  "comprehensiveHealthMonitoring": "Comprehensive Health Monitoring",
+  "platformDescription": "Our platform combines cutting-edge biomarker analysis with holistic health assessment",
+  "features": {
+    "stressBiomarkers": {
+      "title": "Stress Biomarkers",
+      "description": "Revolutionary cell-free DNA measurement for accurate stress level assessment"
+    },
+    "holisticAnalysis": {
+      "title": "Holistic Analysis",
+      "description": "Comprehensive evaluation of biochemical, physical, and psychological stress"
+    },
+    "dataIntegration": {
+      "title": "Data Integration",
+      "description": "Unified platform bringing all health metrics into one accessible dashboard"
+    },
+    "professionalFocus": {
+      "title": "Professional Focus",
+      "description": "Tailored solutions for medical professionals and HR departments"
+    }
+  },
+  "readyToTransform": "Ready to Transform Health Monitoring?",
+  "joinEarlyAccess": "Join our early access program to be among the first to access our revolutionary platform",
+  "enterEmail": "Enter your email",
+  "submitting": "Submitting...",
+  "research": "Research",
+  "vision": "Vision",
+  "earlyAccess": "Early Access"
+}

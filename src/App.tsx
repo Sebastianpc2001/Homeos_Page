@@ -6,6 +6,7 @@ import Research from "@/pages/Research";
 import Vision from "@/pages/Vision";
 import NotFound from "@/pages/NotFound";
 import { Toaster } from "sonner";
+import LanguageSwitcher from "@/components/LanguageSwitcher";
 import "./App.css";
 
 const router = createBrowserRouter([
@@ -35,6 +36,7 @@ function App() {
   return (
     <>
       <Toaster position="top-center" />
+      <LanguageSwitcher />
       <RouterProvider router={router} />
     </>
   );
