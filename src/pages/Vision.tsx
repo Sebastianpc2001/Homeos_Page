@@ -20,13 +20,13 @@ const Vision = () => {
             <h1 className="text-4xl md:text-5xl font-bold mb-8 text-center">Our Vision</h1>
             <div className="prose prose-lg max-w-none">
               <p className="text-lg text-muted-foreground mb-8">
-                Conventional medical care is reactive—treating symptoms only after they appear, making health management costly, stressful, and often too late.
+                Today's healthcare only treats problems <strong>after</strong> you get sick. This makes staying healthy expensive, stressful, and often too late.
               </p>
               <p className="text-lg text-muted-foreground mb-8">
-                At HOMEOS, we believe health is a non-negotiable right. Everyone deserves access to high-quality tools that enable proactive health management, helping people take control of their well-being before problems arise.
+                At HOMEOS, we believe <strong>good health is a right for everyone</strong>. You deserve tools that help you take control of your health before problems start.
               </p>
               <p className="text-lg text-muted-foreground mb-12">
-                We envision a future where understanding your health is as simple as checking the weather—where biological insights are accessible, clear, and actionable, empowering individuals to make informed choices that prevent disease and enhance longevity.
+                We want a future where checking your health is as easy as checking the weather. A world where health information is <strong>simple to understand and use</strong>, helping you make better choices to stay healthy and live longer.
               </p>
             </div>
           </motion.div>
@@ -45,10 +45,10 @@ const Vision = () => {
             <h2 className="text-3xl font-bold mb-8">Where We're Headed</h2>
             <div className="space-y-8">
               {[
-                { time: "Now", content: "We are building reliable and accessible solutions to measure and manage biological stress, making preventive care easier and more precise." },
-                { time: "5 Years", content: "HOMEOS will be a trusted name in preventive medicine, with early adopters—doctors and individuals—using our system to track and optimize health outcomes." },
-                { time: "10 Years", content: "Our technology will be widely integrated into healthcare systems, transforming personalized health tracking into a standard practice." },
-                { time: "15 Years", content: "HOMEOS will set the industry benchmark for proactive health management, making accessible, science-backed health insights a fundamental part of everyday life." }
+                { time: "Now", content: "We're creating <strong>easy-to-use tools</strong> to measure and manage your body's stress levels, making it simpler to stay healthy." },
+                { time: "5 Years", content: "HOMEOS will be known for helping people track and improve their health. Doctors and individuals will use our system to <strong>get better results</strong>." },
+                { time: "10 Years", content: "Our technology will be used in hospitals and clinics everywhere, making <strong>personalized health tracking normal</strong> for everyone." },
+                { time: "15 Years", content: "HOMEOS will set the standard for health management. <strong>Science-based health insights</strong> will be a normal part of everyday life." }
               ].map((item, index) => (
                 <motion.div
                   key={item.time}
@@ -59,7 +59,7 @@ const Vision = () => {
                   className="flex gap-6"
                 >
                   <div className="flex-shrink-0 w-24 font-bold text-primary">{item.time}</div>
-                  <div className="flex-grow">{item.content}</div>
+                  <div className="flex-grow" dangerouslySetInnerHTML={{ __html: item.content }}></div>
                 </motion.div>
               ))}
             </div>
@@ -77,43 +77,43 @@ const Vision = () => {
             className="max-w-4xl mx-auto space-y-16"
           >
             <div>
-              <h2 className="text-3xl font-bold mb-6">Our Aspiration</h2>
+              <h2 className="text-3xl font-bold mb-6">Our Goal</h2>
               <p className="text-lg text-muted-foreground">
-                To be the most insightful and accessible system for managing biological stress, turning complex health data into clear, actionable knowledge.
+                To build the <strong>most helpful and easy-to-use system</strong> for managing body stress, turning complex health data into clear, useful information.
               </p>
             </div>
 
             <div>
               <h2 className="text-3xl font-bold mb-6">Why We Exist</h2>
               <p className="text-lg text-muted-foreground mb-6">
-                Because healthcare should not be a privilege—it should be a proactive, empowering experience.
+                Because healthcare should be <strong>for everyone</strong> and should help you <strong>prevent problems</strong>, not just treat them.
               </p>
               <p className="text-lg text-muted-foreground">
-                We challenge the outdated, one-size-fits-all approach that reacts to illness instead of preventing it. We create solutions that simplify health insights, so you and your doctor can take action before problems begin.
+                We're challenging the old way of thinking that only deals with sickness after it happens. We create tools that make health information easy to understand, so you and your doctor can take action <strong>before problems start</strong>.
               </p>
             </div>
 
             <div>
-              <h2 className="text-3xl font-bold mb-6">Our Ideal Future</h2>
+              <h2 className="text-3xl font-bold mb-6">Our Dream Future</h2>
               <p className="text-lg text-muted-foreground mb-6">
-                A world where proactive health management is the norm, where people feel empowered, not lost when it comes to their well-being.
+                A world where <strong>staying healthy is normal</strong>, where people feel confident, not confused, about their health.
               </p>
               <ul className="space-y-2 mb-8">
                 <li className="flex items-center gap-2">
                   <span className="text-primary">🔹</span>
-                  <span>No more guessing.</span>
+                  <span><strong>No more guessing</strong> about your health.</span>
                 </li>
                 <li className="flex items-center gap-2">
                   <span className="text-primary">🔹</span>
-                  <span>No more late interventions.</span>
+                  <span><strong>No more treating problems too late</strong>.</span>
                 </li>
                 <li className="flex items-center gap-2">
                   <span className="text-primary">🔹</span>
-                  <span>Just clarity, confidence, and control over your health.</span>
+                  <span>Just <strong>clear understanding and control</strong> over your health.</span>
                 </li>
               </ul>
               <p className="text-lg font-medium">
-                Join us in reshaping the future of health—because understanding is the key to well-being.
+                Join us in creating a better future for health—because <strong>understanding your body is the key to staying well</strong>.
               </p>
             </div>
 
