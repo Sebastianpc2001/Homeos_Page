@@ -3,32 +3,35 @@ import { motion } from "framer-motion";
 import { ArrowLeft, HeartPulse, Brain, ChartLine, Users } from "lucide-react";
 import { Link } from "react-router-dom";
 import Navigation from "@/components/Navigation";
+import { useTranslation } from "react-i18next";
 
 const Features = () => {
+  const { t } = useTranslation();
+  
   const features = [
     {
       icon: <HeartPulse className="w-8 h-8" />,
-      title: "Stress Biomarkers",
-      description: "Revolutionary cell-free DNA measurement for accurate stress level assessment",
-      link: "#"
+      title: t("features.stressBiomarkers.title"),
+      description: t("features.stressBiomarkers.description"),
+      detailedDescription: "Cell-free DNA has been developed as a biomarker for preventive medicine over the past decade. However, its detection has remained extremely time-consuming and expensive. With our patent, we have developed a rapid and accessible method requiring just a drop of blood."
     },
     {
       icon: <Brain className="w-8 h-8" />,
-      title: "Holistic Analysis",
-      description: "Comprehensive evaluation of biochemical, physical, and psychological stress",
-      link: "#"
+      title: t("features.holisticAnalysis.title"),
+      description: t("features.holisticAnalysis.description"),
+      detailedDescription: "Stress is multidimensional—one's health can be highly compromised in one area, affecting others. To address this, we integrate physical, psychological, and biological assessments to understand individuals as a whole."
     },
     {
       icon: <ChartLine className="w-8 h-8" />,
-      title: "Data Integration",
-      description: "Unified platform bringing all health metrics into one accessible dashboard",
-      link: "#"
+      title: t("features.dataIntegration.title"),
+      description: t("features.dataIntegration.description"),
+      detailedDescription: "To fully comprehend these data points, they must be analyzed together. We are building a system that unifies data analysis and simulation into one accessible dashboard."
     },
     {
       icon: <Users className="w-8 h-8" />,
-      title: "Professional Focus",
-      description: "Tailored solutions for medical professionals and HR departments",
-      link: "#"
+      title: t("features.professionalFocus.title"),
+      description: t("features.professionalFocus.description"),
+      detailedDescription: "We provide a platform that enables medical professionals and HR departments to efficiently manage their patients in one centralized system."
     }
   ];
 
@@ -52,7 +55,7 @@ const Features = () => {
           animate={{ opacity: 1, y: 0 }}
           className="text-4xl font-bold mb-12 text-center text-[#1E3A8A]"
         >
-          Comprehensive Health Monitoring
+          {t("comprehensiveHealthMonitoring")}
         </motion.h1>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
@@ -71,15 +74,12 @@ const Features = () => {
                 <h2 className="text-2xl font-semibold mb-4 text-[#1E3A8A]">
                   {feature.title}
                 </h2>
-                <p className="text-gray-600 mb-6">
+                <p className="text-gray-600 mb-4">
                   {feature.description}
                 </p>
-                <Link
-                  to={feature.link}
-                  className="inline-flex items-center px-6 py-3 text-base font-medium text-white bg-[#1E3A8A] rounded-lg hover:bg-[#1E3A8A]/90 transition-colors"
-                >
-                  Learn More
-                </Link>
+                <p className="text-gray-700 text-sm">
+                  {feature.detailedDescription}
+                </p>
               </div>
             </motion.div>
           ))}
