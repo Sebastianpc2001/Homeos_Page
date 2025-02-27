@@ -1,5 +1,5 @@
 
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 import { ChartLine, Brain, HeartPulse, Users, ArrowRight } from "lucide-react";
 import Navigation from "@/components/Navigation";
@@ -14,6 +14,152 @@ const Index = () => {
   const [isHovered, setIsHovered] = useState("");
   const [email, setEmail] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+  const canvasRef = useRef<HTMLCanvasElement>(null);
+  const heroSectionRef = useRef<HTMLElement>(null);
+
+  // Network of dots configuration
+  useEffect(() => {
+    const canvas = canvasRef.current;
+    if (!canvas) return;
+
+    const ctx = canvas.getContext('2d');
+    if (!ctx) return;
+
+    const heroSection = heroSectionRef.current;
+    if (!heroSection) return;
+
+    // Set canvas dimensions to match hero section
+    const resizeCanvas = () => {
+      const rect = heroSection.getBoundingClientRect();
+      canvas.width = rect.width;
+      canvas.height = rect.height;
+    };
+
+    resizeCanvas();
+    window.addEventListener('resize', resizeCanvas);
+
+    // Particle properties
+    const particlesArray: {
+      x: number;
+      y: number;
+      size: number;
+      speedX: number;
+      speedY: number;
+      opacity: number;
+    }[] = [];
+    const numberOfParticles = 80;
+    const maxDistance = 150;
+
+    // Create particles
+    const createParticles = () => {
+      for (let i = 0; i < numberOfParticles; i++) {
+        particlesArray.push({
+          x: Math.random() * canvas.width,
+          y: Math.random() * canvas.height,
+          size: Math.random() * 2 + 1,
+          speedX: (Math.random() - 0.5) * 0.5,
+          speedY: (Math.random() - 0.5) * 0.5,
+          opacity: Math.random() * 0.5 + 0.2
+        });
+      }
+    };
+
+    createParticles();
+
+    // Animation loop
+    const animate = () => {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      
+      // Update particles
+      for (let i = 0; i < particlesArray.length; i++) {
+        let p = particlesArray[i];
+        
+        // Move particles
+        p.x += p.speedX;
+        p.y += p.speedY;
+        
+        // Wrap around screen edges
+        if (p.x > canvas.width) p.x = 0;
+        else if (p.x < 0) p.x = canvas.width;
+        if (p.y > canvas.height) p.y = 0;
+        else if (p.y < 0) p.y = canvas.height;
+        
+        // Calculate distance to mouse
+        const dx = p.x - mousePosition.x;
+        const dy = p.y - mousePosition.y;
+        const distance = Math.sqrt(dx * dx + dy * dy);
+        
+        // Adjust particle if near mouse
+        if (distance < 80) {
+          const angle = Math.atan2(dy, dx);
+          p.x += Math.cos(angle) * 0.5;
+          p.y += Math.sin(angle) * 0.5;
+        }
+        
+        // Draw particles
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
+        ctx.fillStyle = `rgba(14, 165, 233, ${p.opacity})`;
+        ctx.fill();
+      }
+      
+      // Connect particles with lines
+      for (let i = 0; i < particlesArray.length; i++) {
+        for (let j = i + 1; j < particlesArray.length; j++) {
+          const dx = particlesArray[i].x - particlesArray[j].x;
+          const dy = particlesArray[i].y - particlesArray[j].y;
+          const distance = Math.sqrt(dx * dx + dy * dy);
+          
+          if (distance < maxDistance) {
+            // Make connections near mouse brighter
+            const mouseDistanceI = Math.sqrt(
+              Math.pow(particlesArray[i].x - mousePosition.x, 2) + 
+              Math.pow(particlesArray[i].y - mousePosition.y, 2)
+            );
+            const mouseDistanceJ = Math.sqrt(
+              Math.pow(particlesArray[j].x - mousePosition.x, 2) + 
+              Math.pow(particlesArray[j].y - mousePosition.y, 2)
+            );
+            
+            const mouseProximityEffect = 
+              (mouseDistanceI < 100 || mouseDistanceJ < 100) ? 0.3 : 0;
+            
+            const opacity = (1 - distance / maxDistance) * 0.3 + mouseProximityEffect;
+            
+            ctx.strokeStyle = `rgba(14, 165, 233, ${opacity})`;
+            ctx.lineWidth = 1;
+            ctx.beginPath();
+            ctx.moveTo(particlesArray[i].x, particlesArray[i].y);
+            ctx.lineTo(particlesArray[j].x, particlesArray[j].y);
+            ctx.stroke();
+          }
+        }
+      }
+      
+      requestAnimationFrame(animate);
+    };
+
+    // Track mouse position
+    const handleMouseMove = (e: MouseEvent) => {
+      const rect = canvas.getBoundingClientRect();
+      setMousePosition({
+        x: e.clientX - rect.left,
+        y: e.clientY - rect.top
+      });
+    };
+    
+    window.addEventListener('mousemove', handleMouseMove);
+    
+    // Start animation
+    animate();
+    
+    // Cleanup
+    return () => {
+      window.removeEventListener('resize', resizeCanvas);
+      window.removeEventListener('mousemove', handleMouseMove);
+    };
+  }, []);
 
   const features = [
     {
@@ -81,8 +227,13 @@ const Index = () => {
       <Toaster position="top-center" />
       
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center px-4 py-20">
-        <div className="absolute inset-0 bg-gradient-to-br from-secondary via-background to-background z-0" />
+      <section ref={heroSectionRef} className="relative min-h-screen flex items-center justify-center px-4 py-20">
+        {/* Dynamic background */}
+        <canvas 
+          ref={canvasRef}
+          className="absolute inset-0 z-0 bg-gradient-to-br from-secondary via-background to-background"
+        />
+        
         <div className="container relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
