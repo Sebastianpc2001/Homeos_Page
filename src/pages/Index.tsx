@@ -4,9 +4,14 @@ import { motion } from "framer-motion";
 import { ChartLine, Brain, HeartPulse, Users, ArrowRight } from "lucide-react";
 import Navigation from "@/components/Navigation";
 import { Link } from "react-router-dom";
+import { supabase } from "@/integrations/supabase/client";
+import { Toaster } from "@/components/ui/sonner";
+import { toast } from "sonner";
 
 const Index = () => {
   const [isHovered, setIsHovered] = useState("");
+  const [email, setEmail] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const features = [
     {
@@ -31,9 +36,47 @@ const Index = () => {
     },
   ];
 
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    
+    if (!email || !email.includes('@')) {
+      toast.error("Please enter a valid email address");
+      return;
+    }
+
+    setIsSubmitting(true);
+    console.log("Submitting email:", email);
+
+    try {
+      const { data, error } = await supabase
+        .from('waitlist')
+        .insert([{ email }]);
+
+      console.log("Supabase response:", { data, error });
+
+      if (error) {
+        if (error.code === '23505') {
+          toast.info("You're already on our waitlist!");
+        } else {
+          console.error("Error submitting email:", error);
+          toast.error("There was an error submitting your email. Please try again.");
+        }
+      } else {
+        toast.success("Thanks for joining our waitlist!");
+        setEmail("");
+      }
+    } catch (error) {
+      console.error("Error:", error);
+      toast.error("There was an error submitting your email. Please try again.");
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
   return (
     <div className="min-h-screen overflow-x-hidden pt-16">
       <Navigation />
+      <Toaster position="top-center" />
       
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center px-4 py-20">
@@ -113,18 +156,22 @@ const Index = () => {
             <p className="text-lg text-muted-foreground mb-8">
               Join our early access program to be among the first to access our revolutionary platform
             </p>
-            <form className="max-w-md mx-auto px-4">
+            <form onSubmit={handleSubmit} className="max-w-md mx-auto px-4">
               <div className="flex flex-col md:flex-row gap-4">
                 <input
                   type="email"
                   placeholder="Enter your email"
                   className="flex-1 px-4 py-3 rounded-lg border border-border focus:outline-none focus:ring-2 focus:ring-primary w-full"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  required
                 />
                 <button
                   type="submit"
-                  className="w-full md:w-auto px-6 py-3 bg-primary text-white rounded-lg hover:bg-primary/90 transition-colors whitespace-nowrap"
+                  className="w-full md:w-auto px-6 py-3 bg-primary text-white rounded-lg hover:bg-primary/90 transition-colors whitespace-nowrap disabled:opacity-70"
+                  disabled={isSubmitting}
                 >
-                  Get Early Access
+                  {isSubmitting ? "Submitting..." : "Get Early Access"}
                 </button>
               </div>
             </form>
