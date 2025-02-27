@@ -1,6 +1,6 @@
 
 import { motion } from "framer-motion";
-import { ArrowLeft, FileText, Brain, Heart, ChartLine, Timer, Activity } from "lucide-react";
+import { ArrowLeft, FileText, Brain, Heart, ChartLine, Timer, Activity, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import Navigation from "@/components/Navigation";
 import { useTranslation } from "react-i18next";
@@ -153,6 +153,16 @@ const Research = () => {
               </div>
             </motion.div>
           ))}
+        </div>
+
+        <div className="mt-16 text-center">
+          <a
+            href="/#waitlist"
+            className="inline-flex items-center px-6 py-3 text-base font-medium text-white bg-primary rounded-lg hover:bg-primary/90 transition-colors"
+          >
+            {t("earlyAccess")}
+            <ArrowRight className="ml-2 w-4 h-4" />
+          </a>
         </div>
       </div>
     </div>

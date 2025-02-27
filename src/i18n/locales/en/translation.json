@@ -33,10 +33,10 @@
   "enterEmail": "Enter your email",
   "submitting": "Submitting...",
   "research": "Research",
-  "vision": "Vision",
+  "visionLink": "Vision",
   "earlyAccess": "Early Access",
   "backToHome": "Back to Home",
-  "vision": {
+  "visionPage": {
     "title": "Our Vision",
     "intro1": "Today's healthcare only treats problems <strong>after</strong> you get sick. This makes staying healthy expensive, stressful, and often too late.",
     "intro2": "At HOMEOS, we believe <strong>good health is a right for everyone</strong>. You deserve tools that help you take control of your health before problems start.",

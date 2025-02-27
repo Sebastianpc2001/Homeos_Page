@@ -20,11 +20,11 @@ const Vision = () => {
             transition={{ duration: 0.8 }}
             className="max-w-4xl mx-auto"
           >
-            <h1 className="text-4xl md:text-5xl font-bold mb-8 text-center">{t("vision.title")}</h1>
+            <h1 className="text-4xl md:text-5xl font-bold mb-8 text-center">{t("visionPage.title")}</h1>
             <div className="prose prose-lg max-w-none">
-              <p className="text-lg text-muted-foreground mb-8" dangerouslySetInnerHTML={{ __html: t("vision.intro1") }}></p>
-              <p className="text-lg text-muted-foreground mb-8" dangerouslySetInnerHTML={{ __html: t("vision.intro2") }}></p>
-              <p className="text-lg text-muted-foreground mb-12" dangerouslySetInnerHTML={{ __html: t("vision.intro3") }}></p>
+              <p className="text-lg text-muted-foreground mb-8" dangerouslySetInnerHTML={{ __html: t("visionPage.intro1") }}></p>
+              <p className="text-lg text-muted-foreground mb-8" dangerouslySetInnerHTML={{ __html: t("visionPage.intro2") }}></p>
+              <p className="text-lg text-muted-foreground mb-12" dangerouslySetInnerHTML={{ __html: t("visionPage.intro3") }}></p>
             </div>
           </motion.div>
         </div>
@@ -39,13 +39,13 @@ const Vision = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="max-w-4xl mx-auto"
           >
-            <h2 className="text-3xl font-bold mb-8">{t("vision.timeline")}</h2>
+            <h2 className="text-3xl font-bold mb-8">{t("visionPage.timeline")}</h2>
             <div className="space-y-8">
               {[
-                { time: t("vision.now"), content: t("vision.nowContent") },
-                { time: t("vision.fiveYears"), content: t("vision.fiveYearsContent") },
-                { time: t("vision.tenYears"), content: t("vision.tenYearsContent") },
-                { time: t("vision.fifteenYears"), content: t("vision.fifteenYearsContent") }
+                { time: t("visionPage.now"), content: t("visionPage.nowContent") },
+                { time: t("visionPage.fiveYears"), content: t("visionPage.fiveYearsContent") },
+                { time: t("visionPage.tenYears"), content: t("visionPage.tenYearsContent") },
+                { time: t("visionPage.fifteenYears"), content: t("visionPage.fifteenYearsContent") }
               ].map((item, index) => (
                 <motion.div
                   key={item.time}
@@ -74,39 +74,39 @@ const Vision = () => {
             className="max-w-4xl mx-auto space-y-16"
           >
             <div>
-              <h2 className="text-3xl font-bold mb-6">{t("vision.goal")}</h2>
-              <p className="text-lg text-muted-foreground" dangerouslySetInnerHTML={{ __html: t("vision.goalContent") }}></p>
+              <h2 className="text-3xl font-bold mb-6">{t("visionPage.goal")}</h2>
+              <p className="text-lg text-muted-foreground" dangerouslySetInnerHTML={{ __html: t("visionPage.goalContent") }}></p>
             </div>
 
             <div>
-              <h2 className="text-3xl font-bold mb-6">{t("vision.why")}</h2>
-              <p className="text-lg text-muted-foreground mb-6" dangerouslySetInnerHTML={{ __html: t("vision.whyContent1") }}></p>
-              <p className="text-lg text-muted-foreground" dangerouslySetInnerHTML={{ __html: t("vision.whyContent2") }}></p>
+              <h2 className="text-3xl font-bold mb-6">{t("visionPage.why")}</h2>
+              <p className="text-lg text-muted-foreground mb-6" dangerouslySetInnerHTML={{ __html: t("visionPage.whyContent1") }}></p>
+              <p className="text-lg text-muted-foreground" dangerouslySetInnerHTML={{ __html: t("visionPage.whyContent2") }}></p>
             </div>
 
             <div>
-              <h2 className="text-3xl font-bold mb-6">{t("vision.dreamFuture")}</h2>
-              <p className="text-lg text-muted-foreground mb-6" dangerouslySetInnerHTML={{ __html: t("vision.dreamFutureContent") }}></p>
+              <h2 className="text-3xl font-bold mb-6">{t("visionPage.dreamFuture")}</h2>
+              <p className="text-lg text-muted-foreground mb-6" dangerouslySetInnerHTML={{ __html: t("visionPage.dreamFutureContent") }}></p>
               <ul className="space-y-2 mb-8">
                 <li className="flex items-center gap-2">
                   <span className="text-primary">🔹</span>
-                  <span dangerouslySetInnerHTML={{ __html: t("vision.benefit1") }}></span>
+                  <span dangerouslySetInnerHTML={{ __html: t("visionPage.benefit1") }}></span>
                 </li>
                 <li className="flex items-center gap-2">
                   <span className="text-primary">🔹</span>
-                  <span dangerouslySetInnerHTML={{ __html: t("vision.benefit2") }}></span>
+                  <span dangerouslySetInnerHTML={{ __html: t("visionPage.benefit2") }}></span>
                 </li>
                 <li className="flex items-center gap-2">
                   <span className="text-primary">🔹</span>
-                  <span dangerouslySetInnerHTML={{ __html: t("vision.benefit3") }}></span>
+                  <span dangerouslySetInnerHTML={{ __html: t("visionPage.benefit3") }}></span>
                 </li>
               </ul>
-              <p className="text-lg font-medium" dangerouslySetInnerHTML={{ __html: t("vision.conclusion") }}></p>
+              <p className="text-lg font-medium" dangerouslySetInnerHTML={{ __html: t("visionPage.conclusion") }}></p>
             </div>
 
             <div className="text-center">
               <a
-                href="#waitlist"
+                href="/#waitlist"
                 className="inline-flex items-center px-6 py-3 text-base font-medium text-white bg-primary rounded-lg hover:bg-primary/90 transition-colors"
               >
                 {t("earlyAccess")}
