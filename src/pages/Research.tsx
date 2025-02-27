@@ -3,8 +3,11 @@ import { motion } from "framer-motion";
 import { ArrowLeft, FileText, Brain, Heart, ChartLine, Timer, Activity } from "lucide-react";
 import { Link } from "react-router-dom";
 import Navigation from "@/components/Navigation";
+import { useTranslation } from "react-i18next";
 
 const Research = () => {
+  const { t } = useTranslation();
+  
   const categories = [
     {
       title: "Cardiovascular Inflammation",
@@ -91,7 +94,7 @@ const Research = () => {
             className="inline-flex items-center text-[#1E3A8A] hover:text-[#1E3A8A]/80 transition-colors"
           >
             <ArrowLeft className="w-4 h-4 mr-2" />
-            Back to Home
+            {t("backToHome")}
           </Link>
         </div>
 
@@ -112,11 +115,13 @@ const Research = () => {
               transition={{ delay: index * 0.1 }}
               className="glass-card p-6 rounded-xl"
             >
-              <div className="flex items-center gap-3 mb-4">
+              <div className="flex items-center gap-3 mb-4 flex-wrap">
                 <div className="p-2 bg-[#1E3A8A]/10 rounded-lg">
                   {category.icon}
                 </div>
-                <h2 className="text-2xl font-semibold text-[#1E3A8A]">{category.title}</h2>
+                <h2 className="text-xl md:text-2xl font-semibold text-[#1E3A8A] break-words hyphens-auto">
+                  {category.title}
+                </h2>
               </div>
 
               <div className="space-y-4">

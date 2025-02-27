@@ -3,7 +3,7 @@
   "launchingSoon": "Launching Soon",
   "advancedStressAnalysis": "Advanced Stress Analysis",
   "description": "HOMEOS measures and analyzes stress and inflammation using patented biomarker technology to help prevent health issues before they arise.",
-  "getEarlyAccess": "Get Early Access",
+  "getEarlyAccess": "Early Access",
   "comprehensiveHealthMonitoring": "Comprehensive Health Monitoring",
   "platformDescription": "Our platform combines cutting-edge biomarker analysis with holistic health assessment",
   "features": {
@@ -35,5 +35,31 @@
   "research": "Research",
   "vision": "Vision",
   "earlyAccess": "Early Access",
-  "backToHome": "Back to Home"
+  "backToHome": "Back to Home",
+  "vision": {
+    "title": "Our Vision",
+    "intro1": "Today's healthcare only treats problems <strong>after</strong> you get sick. This makes staying healthy expensive, stressful, and often too late.",
+    "intro2": "At HOMEOS, we believe <strong>good health is a right for everyone</strong>. You deserve tools that help you take control of your health before problems start.",
+    "intro3": "We want a future where checking your health is as easy as checking the weather. A world where health information is <strong>simple to understand and use</strong>, helping you make better choices to stay healthy and live longer.",
+    "timeline": "Where We're Headed",
+    "now": "Now",
+    "fiveYears": "5 Years",
+    "tenYears": "10 Years",
+    "fifteenYears": "15 Years",
+    "nowContent": "We're creating <strong>easy-to-use tools</strong> to measure and manage your body's stress levels, making it simpler to stay healthy.",
+    "fiveYearsContent": "HOMEOS will be known for helping people track and improve their health. Doctors and individuals will use our system to <strong>get better results</strong>.",
+    "tenYearsContent": "Our technology will be used in hospitals and clinics everywhere, making <strong>personalized health tracking normal</strong> for everyone.",
+    "fifteenYearsContent": "HOMEOS will set the standard for health management. <strong>Science-based health insights</strong> will be a normal part of everyday life.",
+    "goal": "Our Goal",
+    "goalContent": "To build the <strong>most helpful and easy-to-use system</strong> for managing body stress, turning complex health data into clear, useful information.",
+    "why": "Why We Exist",
+    "whyContent1": "Because healthcare should be <strong>for everyone</strong> and should help you <strong>prevent problems</strong>, not just treat them.",
+    "whyContent2": "We're challenging the old way of thinking that only deals with sickness after it happens. We create tools that make health information easy to understand, so you and your doctor can take action <strong>before problems start</strong>.",
+    "dreamFuture": "Our Dream Future",
+    "dreamFutureContent": "A world where <strong>staying healthy is normal</strong>, where people feel confident, not confused, about their health.",
+    "benefit1": "<strong>No more guessing</strong> about your health.",
+    "benefit2": "<strong>No more treating problems too late</strong>.",
+    "benefit3": "Just <strong>clear understanding and control</strong> over your health.",
+    "conclusion": "Join us in creating a better future for health—because <strong>understanding your body is the key to staying well</strong>."
+  }
 }

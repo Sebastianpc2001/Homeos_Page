@@ -265,7 +265,7 @@ const Index = () => {
               href="#waitlist" 
               className="inline-flex items-center px-6 py-3 text-base font-medium text-white bg-primary rounded-lg hover:bg-primary/90 transition-colors"
             >
-              {t("getEarlyAccess")}
+              {t("earlyAccess")}
               <ArrowRight className="ml-2 w-4 h-4" />
             </a>
           </motion.div>
@@ -337,7 +337,7 @@ const Index = () => {
                   className="w-full md:w-auto px-6 py-3 bg-primary text-white rounded-lg hover:bg-primary/90 transition-colors whitespace-nowrap disabled:opacity-70"
                   disabled={isSubmitting}
                 >
-                  {isSubmitting ? t("submitting") : t("getEarlyAccess")}
+                  {isSubmitting ? t("submitting") : t("earlyAccess")}
                 </button>
               </div>
             </form>

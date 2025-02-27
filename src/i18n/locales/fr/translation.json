@@ -3,7 +3,7 @@
   "launchingSoon": "Bientôt Disponible",
   "advancedStressAnalysis": "Analyse Avancée du Stress",
   "description": "HOMEOS mesure et analyse le stress et l'inflammation à l'aide d'une technologie brevetée de biomarqueurs pour aider à prévenir les problèmes de santé avant qu'ils ne surviennent.",
-  "getEarlyAccess": "Obtenir un Accès Anticipé",
+  "getEarlyAccess": "Accès Anticipé",
   "comprehensiveHealthMonitoring": "Surveillance Complète de la Santé",
   "platformDescription": "Notre plateforme combine une analyse de biomarqueurs de pointe avec une évaluation holistique de la santé",
   "features": {
@@ -35,5 +35,31 @@
   "research": "Recherche",
   "vision": "Vision",
   "earlyAccess": "Accès Anticipé",
-  "backToHome": "Retour à l'Accueil"
+  "backToHome": "Retour à l'Accueil",
+  "vision": {
+    "title": "Notre Vision",
+    "intro1": "Les soins de santé actuels ne traitent les problèmes qu'<strong>après</strong> que vous tombiez malade. Cela rend le maintien de la santé coûteux, stressant et souvent trop tardif.",
+    "intro2": "Chez HOMEOS, nous croyons que <strong>la bonne santé est un droit pour tous</strong>. Vous méritez des outils qui vous aident à prendre le contrôle de votre santé avant que les problèmes ne commencent.",
+    "intro3": "Nous voulons un avenir où vérifier votre santé est aussi facile que de vérifier la météo. Un monde où l'information sur la santé est <strong>simple à comprendre et à utiliser</strong>, vous aidant à faire de meilleurs choix pour rester en bonne santé et vivre plus longtemps.",
+    "timeline": "Où Nous Allons",
+    "now": "Maintenant",
+    "fiveYears": "5 Ans",
+    "tenYears": "10 Ans",
+    "fifteenYears": "15 Ans",
+    "nowContent": "Nous créons des <strong>outils faciles à utiliser</strong> pour mesurer et gérer les niveaux de stress de votre corps, rendant plus simple le maintien de la santé.",
+    "fiveYearsContent": "HOMEOS sera connu pour aider les gens à suivre et améliorer leur santé. Les médecins et les individus utiliseront notre système pour <strong>obtenir de meilleurs résultats</strong>.",
+    "tenYearsContent": "Notre technologie sera utilisée dans les hôpitaux et cliniques partout, rendant <strong>le suivi personnalisé de la santé normal</strong> pour tous.",
+    "fifteenYearsContent": "HOMEOS établira la norme pour la gestion de la santé. <strong>Les connaissances en santé fondées sur la science</strong> feront partie normale de la vie quotidienne.",
+    "goal": "Notre Objectif",
+    "goalContent": "Construire le <strong>système le plus utile et facile à utiliser</strong> pour gérer le stress corporel, transformant des données de santé complexes en informations claires et utiles.",
+    "why": "Pourquoi Nous Existons",
+    "whyContent1": "Parce que les soins de santé devraient être <strong>pour tous</strong> et devraient vous aider à <strong>prévenir les problèmes</strong>, pas seulement les traiter.",
+    "whyContent2": "Nous défions l'ancienne façon de penser qui ne traite que la maladie après qu'elle se produit. Nous créons des outils qui rendent l'information sur la santé facile à comprendre, pour que vous et votre médecin puissiez agir <strong>avant que les problèmes ne commencent</strong>.",
+    "dreamFuture": "Notre Futur Rêvé",
+    "dreamFutureContent": "Un monde où <strong>rester en bonne santé est normal</strong>, où les gens se sentent confiants, pas confus, à propos de leur santé.",
+    "benefit1": "<strong>Plus de suppositions</strong> sur votre santé.",
+    "benefit2": "<strong>Plus de traitement de problèmes trop tard</strong>.",
+    "benefit3": "Juste <strong>une compréhension claire et un contrôle</strong> sur votre santé.",
+    "conclusion": "Rejoignez-nous pour créer un meilleur avenir pour la santé—parce que <strong>comprendre votre corps est la clé pour rester en bonne santé</strong>."
+  }
 }

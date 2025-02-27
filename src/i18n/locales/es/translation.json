@@ -3,7 +3,7 @@
   "launchingSoon": "Próximamente",
   "advancedStressAnalysis": "Análisis Avanzado de Estrés",
   "description": "HOMEOS mide y analiza el estrés y la inflamación utilizando tecnología patentada de biomarcadores para ayudar a prevenir problemas de salud antes de que surjan.",
-  "getEarlyAccess": "Obtener Acceso Anticipado",
+  "getEarlyAccess": "Acceso Anticipado",
   "comprehensiveHealthMonitoring": "Monitoreo Integral de Salud",
   "platformDescription": "Nuestra plataforma combina análisis de biomarcadores de vanguardia con evaluación holística de la salud",
   "features": {
@@ -35,5 +35,31 @@
   "research": "Investigación",
   "vision": "Visión",
   "earlyAccess": "Acceso Anticipado",
-  "backToHome": "Volver al Inicio"
+  "backToHome": "Volver al Inicio",
+  "vision": {
+    "title": "Nuestra Visión",
+    "intro1": "La atención médica actual solo trata los problemas <strong>después</strong> de que te enfermas. Esto hace que mantenerse saludable sea costoso, estresante y a menudo demasiado tarde.",
+    "intro2": "En HOMEOS, creemos que <strong>la buena salud es un derecho para todos</strong>. Mereces herramientas que te ayuden a tomar el control de tu salud antes de que surjan problemas.",
+    "intro3": "Queremos un futuro donde revisar tu salud sea tan fácil como revisar el clima. Un mundo donde la información de salud sea <strong>simple de entender y usar</strong>, ayudándote a tomar mejores decisiones para mantenerte saludable y vivir más tiempo.",
+    "timeline": "Hacia Dónde Vamos",
+    "now": "Ahora",
+    "fiveYears": "5 Años",
+    "tenYears": "10 Años",
+    "fifteenYears": "15 Años",
+    "nowContent": "Estamos creando <strong>herramientas fáciles de usar</strong> para medir y gestionar los niveles de estrés de tu cuerpo, haciendo más simple mantenerse saludable.",
+    "fiveYearsContent": "HOMEOS será conocido por ayudar a las personas a monitorear y mejorar su salud. Médicos e individuos usarán nuestro sistema para <strong>obtener mejores resultados</strong>.",
+    "tenYearsContent": "Nuestra tecnología se utilizará en hospitales y clínicas en todas partes, haciendo que <strong>el seguimiento personalizado de la salud sea normal</strong> para todos.",
+    "fifteenYearsContent": "HOMEOS establecerá el estándar para la gestión de la salud. <strong>Los conocimientos de salud basados en la ciencia</strong> serán una parte normal de la vida cotidiana.",
+    "goal": "Nuestro Objetivo",
+    "goalContent": "Construir el <strong>sistema más útil y fácil de usar</strong> para gestionar el estrés corporal, convirtiendo datos de salud complejos en información clara y útil.",
+    "why": "Por Qué Existimos",
+    "whyContent1": "Porque la atención médica debe ser <strong>para todos</strong> y debe ayudarte a <strong>prevenir problemas</strong>, no solo tratarlos.",
+    "whyContent2": "Estamos desafiando la antigua forma de pensar que solo trata la enfermedad después de que ocurre. Creamos herramientas que facilitan la comprensión de la información de salud, para que tú y tu médico puedan actuar <strong>antes de que comiencen los problemas</strong>.",
+    "dreamFuture": "Nuestro Futuro Soñado",
+    "dreamFutureContent": "Un mundo donde <strong>mantenerse saludable sea normal</strong>, donde las personas se sientan seguras, no confundidas, sobre su salud.",
+    "benefit1": "<strong>No más conjeturas</strong> sobre tu salud.",
+    "benefit2": "<strong>No más tratamiento de problemas demasiado tarde</strong>.",
+    "benefit3": "Solo <strong>comprensión clara y control</strong> sobre tu salud.",
+    "conclusion": "Únete a nosotros para crear un mejor futuro para la salud, porque <strong>entender tu cuerpo es la clave para mantenerse bien</strong>."
+  }
 }
