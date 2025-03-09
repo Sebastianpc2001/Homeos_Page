@@ -88,16 +88,17 @@ const Vision = () => {
               <h2 className="text-3xl font-bold mb-6">{t("visionPage.dreamFuture")}</h2>
               <p className="text-lg text-muted-foreground mb-6" dangerouslySetInnerHTML={{ __html: t("visionPage.dreamFutureContent") }}></p>
               <ul className="space-y-2 mb-8">
-                <li className="flex items-center gap-2">
-                  <span className="text-primary">🔹</span>
+                {/* Fixed mobile alignment by using flex with better alignment */}
+                <li className="flex items-start gap-2">
+                  <span className="text-primary mt-1 flex-shrink-0">🔹</span>
                   <span dangerouslySetInnerHTML={{ __html: t("visionPage.benefit1") }}></span>
                 </li>
-                <li className="flex items-center gap-2">
-                  <span className="text-primary">🔹</span>
+                <li className="flex items-start gap-2">
+                  <span className="text-primary mt-1 flex-shrink-0">🔹</span>
                   <span dangerouslySetInnerHTML={{ __html: t("visionPage.benefit2") }}></span>
                 </li>
-                <li className="flex items-center gap-2">
-                  <span className="text-primary">🔹</span>
+                <li className="flex items-start gap-2">
+                  <span className="text-primary mt-1 flex-shrink-0">🔹</span>
                   <span dangerouslySetInnerHTML={{ __html: t("visionPage.benefit3") }}></span>
                 </li>
               </ul>

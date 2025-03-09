@@ -1,4 +1,3 @@
-
 import { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 import { ChartLine, Brain, HeartPulse, Users, ArrowRight, Lightbulb } from "lucide-react";
@@ -18,7 +17,6 @@ const Index = () => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const heroSectionRef = useRef<HTMLElement>(null);
 
-  // Network of dots configuration
   useEffect(() => {
     const canvas = canvasRef.current;
     if (!canvas) return;
@@ -29,7 +27,6 @@ const Index = () => {
     const heroSection = heroSectionRef.current;
     if (!heroSection) return;
 
-    // Set canvas dimensions to match hero section
     const resizeCanvas = () => {
       const rect = heroSection.getBoundingClientRect();
       canvas.width = rect.width;
@@ -39,7 +36,6 @@ const Index = () => {
     resizeCanvas();
     window.addEventListener('resize', resizeCanvas);
 
-    // Particle properties
     const particlesArray: {
       x: number;
       y: number;
@@ -51,7 +47,6 @@ const Index = () => {
     const numberOfParticles = 80;
     const maxDistance = 150;
 
-    // Create particles
     const createParticles = () => {
       for (let i = 0; i < numberOfParticles; i++) {
         particlesArray.push({
@@ -67,44 +62,36 @@ const Index = () => {
 
     createParticles();
 
-    // Animation loop
     const animate = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
       
-      // Update particles
       for (let i = 0; i < particlesArray.length; i++) {
         let p = particlesArray[i];
         
-        // Move particles
         p.x += p.speedX;
         p.y += p.speedY;
         
-        // Wrap around screen edges
         if (p.x > canvas.width) p.x = 0;
         else if (p.x < 0) p.x = canvas.width;
         if (p.y > canvas.height) p.y = 0;
         else if (p.y < 0) p.y = canvas.height;
         
-        // Calculate distance to mouse
         const dx = p.x - mousePosition.x;
         const dy = p.y - mousePosition.y;
         const distance = Math.sqrt(dx * dx + dy * dy);
         
-        // Adjust particle if near mouse
         if (distance < 80) {
           const angle = Math.atan2(dy, dx);
           p.x += Math.cos(angle) * 0.5;
           p.y += Math.sin(angle) * 0.5;
         }
         
-        // Draw particles
         ctx.beginPath();
         ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
         ctx.fillStyle = `rgba(14, 165, 233, ${p.opacity})`;
         ctx.fill();
       }
       
-      // Connect particles with lines
       for (let i = 0; i < particlesArray.length; i++) {
         for (let j = i + 1; j < particlesArray.length; j++) {
           const dx = particlesArray[i].x - particlesArray[j].x;
@@ -112,7 +99,6 @@ const Index = () => {
           const distance = Math.sqrt(dx * dx + dy * dy);
           
           if (distance < maxDistance) {
-            // Make connections near mouse brighter
             const mouseDistanceI = Math.sqrt(
               Math.pow(particlesArray[i].x - mousePosition.x, 2) + 
               Math.pow(particlesArray[i].y - mousePosition.y, 2)
@@ -140,7 +126,6 @@ const Index = () => {
       requestAnimationFrame(animate);
     };
 
-    // Track mouse position
     const handleMouseMove = (e: MouseEvent) => {
       const rect = canvas.getBoundingClientRect();
       setMousePosition({
@@ -151,10 +136,8 @@ const Index = () => {
     
     window.addEventListener('mousemove', handleMouseMove);
     
-    // Start animation
     animate();
     
-    // Cleanup
     return () => {
       window.removeEventListener('resize', resizeCanvas);
       window.removeEventListener('mousemove', handleMouseMove);
@@ -184,10 +167,20 @@ const Index = () => {
     },
   ];
 
+  const isValidEmail = (email: string) => {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+  };
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
-    if (!email || !email.includes('@')) {
+    if (!email) {
+      toast.error("Please enter an email address");
+      return;
+    }
+
+    if (!isValidEmail(email)) {
       toast.error("Please enter a valid email address");
       return;
     }
@@ -226,9 +219,7 @@ const Index = () => {
       <Navigation />
       <Toaster position="top-center" />
       
-      {/* Hero Section */}
       <section ref={heroSectionRef} className="relative min-h-screen flex items-center justify-center px-4 py-20">
-        {/* Dynamic background */}
         <canvas 
           ref={canvasRef}
           className="absolute inset-0 z-0 bg-gradient-to-br from-secondary via-background to-background"
@@ -272,7 +263,6 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Features Section */}
       <section className="py-20 px-4 bg-blue-50">
         <div className="container">
           <div className="text-center mb-16">
@@ -312,7 +302,6 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Contact Section */}
       <section id="waitlist" className="py-20 px-4 bg-secondary scroll-mt-20">
         <div className="container">
           <div className="max-w-4xl mx-auto text-center">
@@ -331,6 +320,8 @@ const Index = () => {
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   required
+                  pattern="[^\s@]+@[^\s@]+\.[^\s@]+"
+                  title="Please enter a valid email address"
                 />
                 <button
                   type="submit"
